@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { PostagemController } from './postagem/controller/postagem.controller';
+import { PostagemService } from './postagem/services/postagem.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { Postagem } from './postagem/entities/postagem.entity';
 
 @Module({
   imports: [
@@ -11,12 +12,15 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       port: 3306,
       username: 'root',
       password: '1234',
-      database: 'db_blogpessoal', //nome do banco
-      entities: [],
+      database: 'db_blogpessoal',
+      entities: [Postagem],
       synchronize: true
-    })
+    }),
+
+    // 👇 FALTAVA ISSO
+    TypeOrmModule.forFeature([Postagem]),
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [PostagemController],
+  providers: [PostagemService],
 })
 export class AppModule {}
