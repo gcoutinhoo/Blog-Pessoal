@@ -1,3 +1,32 @@
+# 📝 Blog Pessoal
+
+## 🚧 Status do projeto
+🚀 Em desenvolvimento
+
+Este projeto ainda está em construção e novas funcionalidades estão sendo implementadas.
+
+---
+
+## 📌 Sobre o projeto
+O Blog Pessoal é uma API REST desenvolvida para gerenciamento de postagens, permitindo operações como criação, edição, listagem e exclusão de conteúdos.
+
+O objetivo do projeto é aplicar na prática conceitos de desenvolvimento backend com foco em organização, escalabilidade e boas práticas utilizando NestJS.
+
+---
+
+## 🛠️ Tecnologias utilizadas
+- TypeScript
+- Node.js
+- NestJS
+- API REST
+
+---
+
+
+
+
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
