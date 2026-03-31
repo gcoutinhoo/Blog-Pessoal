@@ -17,7 +17,6 @@ import { Postagem } from './postagem/entities/postagem.entity';
       synchronize: true
     }),
 
-    // 👇 FALTAVA ISSO
     TypeOrmModule.forFeature([Postagem]),
   ],
   controllers: [PostagemController],
