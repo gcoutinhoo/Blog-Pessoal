@@ -18,7 +18,6 @@ export class TemaService {
                 postagem: true
             }
         });
-
     }
         
     async findById(id: number): Promise<Tema>{ // select * from tb_postagem where id = ?

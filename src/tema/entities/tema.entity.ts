@@ -14,6 +14,6 @@ export class Tema{
     descricao!: string
 
     @OneToMany(() => Postagem, (postagem) => postagem.tema) // cria uma chave estrangeira
-    postagem!: Postagem
+    postagem!: Postagem[]
     
 }
