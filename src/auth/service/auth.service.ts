@@ -2,7 +2,7 @@ import { HttpException, HttpStatus, Injectable } from "@nestjs/common";
 import { UsuarioService } from "../../usuario/service/usuario.service";
 import { JwtService } from "@nestjs/jwt";
 import { Bcrypt } from "../bcrypt/bcrypt";
-import { Usuariologin } from "../entities/usuariologin.entity";
+import { UsuarioLogin } from "../entities/usuariologin.entity";
 
 @Injectable()
 export class AuthService {
@@ -26,7 +26,7 @@ export class AuthService {
 
     }
 
-    async login(usuarioLogin: Usuariologin){
+    async login(usuarioLogin: UsuarioLogin){
     const payload = { sub: usuarioLogin.usuario }
     const buscaUsuario = await this.usuarioService.findByUsuario(usuarioLogin.usuario)
         if(!buscaUsuario)
